@@ -24,3 +24,15 @@ body {
     font-family: "Helvetica Neue",sans-serif;
     font-weight: lighter;
 }
+
+.conteudo {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    height: 700px;
+    background-color: #f5f4e5;
+    border-radius: 10px;
+    border: 2px solid #592a80;
+    overflow: auto;
+    overflow-style: marquee,panner;
+}
