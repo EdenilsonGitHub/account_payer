@@ -1,0 +1,40 @@
+.even {
+    background-color: #d8c9e6;
+    td {
+        padding: 6px;
+        line-height: 20px;
+        font-size: 15px;
+        border-radius: 15px;
+        text-align: center;
+    }
+}
+
+.odd {
+    background-color: white;
+    td {
+        padding: 6px;
+        line-height: 20px;
+        font-size: 15px;
+        border-radius: 15px;
+        text-align: center;
+    }
+}
+
+.table_index {
+    border-collapse: collapse;
+    color: #666;
+    width: 98%;
+    border-spacing: 2px;
+    margin: 0 auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 15px;
+}
+
+.tr_table_index {
+    background-color: #592a80;
+    color: white;
+    padding: 4px;
+    font-size: 15px;
+    border-radius: 15px;
+}

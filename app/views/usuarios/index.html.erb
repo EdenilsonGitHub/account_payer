@@ -1,0 +1,39 @@
+<!-- <div class="div-cabeca-index" style="text-align: center">
+    <div class="label-org-index pl-35px"> Usuários </div>
+    <div class="botoes-org-index">
+        <%= link_to 'Novo registro', new_usuario_path, class:'btn btn-success' %>
+    </div>
+</div> -->
+<table class="table_index">
+    <% if @usuarios.blank? %>
+        <tr>
+            <td colspan="2" class="nao_ha_registros">
+                Não há registros
+            </td>
+        </tr>
+    <% else %>
+        <div style="width:98%; background-color: #fff; margin:1%; border-radius:25px; color: #592a80; padding: 1%; font-size: 25px; font-weight: bold; border: 2px solid #592a80;" class="text-center">Usuários</div>
+        <thead>
+            <tr>
+                <th class="tr_table_index text-center">ID</th>
+                <th class="tr_table_index text-center">Nome</th>
+                <th class="tr_table_index text-center">login</th>
+                <th class="tr_table_index text-center">Email</th>
+                <th class="tr_table_index text-center">Telefone</th>
+                <th class="tr_table_index text-center">Admin</th>
+            </tr>
+        </thead>
+        <tbody>          
+            <% @usuarios.each do |usuario| %>
+                <tr class="<%= cycle("odd", "even") -%>">
+                    <td class="text-center width-60px"> <%= usuario.id %> </td>
+                    <td class="width-150px"> <%= link_to usuario.nome, usuario_path(usuario), class: 'link-azul' %> </td>
+                    <td class="width-150px"> <%= usuario.login %> </td>
+                    <td class="width-150px"> <%= usuario.email %> </td>
+                    <td class="width-150px"> <%= usuario.telefone %> </td>
+                    <td class="text-center width-60px"> <%= usuario.admin ? 'sim' : 'não' %> </td>
+                </tr>
+            <% end %>
+        </tbody>
+    <% end %>
+</table>
