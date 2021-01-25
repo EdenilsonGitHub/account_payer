@@ -1,0 +1,72 @@
+<%= form_for @usuario, validate:true do |u| %>
+
+    <% if @usuario.errors.any? %>
+        <div class="fundo_erro">
+            <h2 class="text-center">Revise as informações abaixo: </h2>
+            <p> </p>
+            <ul>
+                <% @usuario.errors.full_messages.each do |msg| %>
+                    <li><%= msg.humanize %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    
+    <table class="width_80por">
+        <tbody>
+            <tr>
+                <td class="text-right pr_5px pt_10px">
+                    <%= u.label :login, class: 'text-right width_100px' %>
+                </td>
+                <td>
+                    <%= u.text_field :login, class: 'form-control' %>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right pr_5px pt_10px">
+                    <%= u.label :nome, class: 'text-right width_100px' %>
+                </td>
+                <td>
+                    <%= u.text_field :nome, class: 'form-control' %>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right pr_5px pt_10px">
+                    <%= u.label :email, class: 'text-right width_100px' %>
+                </td>
+                <td>
+                    <%= u.text_field :email, class: 'form-control' %>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right pr_5px pt_10px">
+                    <%= u.label :telefone, class: 'text-right width_100px' %>
+                </td>
+                <td>
+                    <%= u.text_field :telefone, class: 'form-control' %>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right pr_5px pt_10px">
+                    <%= u.label :senha, class: 'text-right width_100px' %>
+                </td>
+                <td>
+                    <%= u.password_field :senha, class: 'form-control' %>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right pr_5px pt_5px">
+                    <%= u.label :admin, class: 'text-right width_100px' %>
+                </td>
+                <td>
+                    <%= u.check_box :admin %>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr class="width_80por">
+    <div class="width_100por text-center">
+        <%= u.submit 'Confirmar', class: 'text-center btn btn-outline-success' %>
+    </div>
+
+<% end %>

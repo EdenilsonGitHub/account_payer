@@ -1,9 +1,3 @@
-<!-- <div class="div-cabeca-index" style="text-align: center">
-    <div class="label-org-index pl-35px"> Usuários </div>
-    <div class="botoes-org-index">
-        <%= link_to 'Novo registro', new_usuario_path, class:'btn btn-success' %>
-    </div>
-</div> -->
 <table class="table_index">
     <% if @usuarios.blank? %>
         <tr>
@@ -12,7 +6,10 @@
             </td>
         </tr>
     <% else %>
-        <div style="width:98%; background-color: #fff; margin:1%; border-radius:25px; color: #592a80; padding: 1%; font-size: 25px; font-weight: bold; border: 2px solid #592a80;" class="text-center">Usuários</div>
+        <div class="br_25" style="width:98%; background-color: #fff; margin:1%; padding: 1%; border: 2px solid #592a80;">
+            <div class="text-center display_block" style="color: #592a80;  font-size: 25px; font-weight: bold; width:85%; padding-left: 10%">Usuários</div>
+            <%= link_to 'Novo registro', new_usuario_path, class:'btn btn-outline-success display_block br_25', style:'width:14%; vertical-align: top;' %></div>
+        </div>
         <thead>
             <tr>
                 <th class="tr_table_index text-center">ID</th>
