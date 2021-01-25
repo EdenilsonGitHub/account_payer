@@ -4,6 +4,10 @@ class UsuariosController < ApplicationController
         @usuarios = Usuario.all
     end
 
+    def show
+        @usuario = Usuario.find_by_id(params[:id])
+    end
+
     def new
         @usuario = Usuario.new
     end

@@ -1,0 +1,30 @@
+<div class="text-center fs_20px m_15px"> Visualizando: <span class="titulo_system"><%= @usuario.nome %></span> </div>
+<hr class="width_80por">
+<div class="width_100por text-center">
+    <%= link_to 'Novo registro', new_usuario_path({ show: "novo", usuario: @usuario}), class:'btn btn-outline-success' %>
+</div>
+<hr class="width_80por">
+<table class="tabela-lado-lado width_80por">
+    <tbody>
+        <tr>
+            <td class="text-right width_330px"> Nome: </td>
+            <td class="pl_10px"> <%= @usuario.nome %> </td>
+        </tr>
+        <tr>
+            <td class="text-right width_330px"> Login: </td>
+            <td class="pl_10px"> <%= @usuario.login %> </td>
+        </tr>
+        <tr>
+            <td class="text-right width_330px"> Email: </td>
+            <td class="pl_10px"> <%= @usuario.email %> </td>
+        </tr>
+        <tr>
+            <td class="text-right width_330px"> Telefone: </td>
+            <td class="pl_10px"> <%= @usuario.telefone %> </td>
+        </tr>
+        <tr>
+            <td class="text-right width_330px"> Administrador: </td>
+            <td class="pl_10px"> <%= @usuario.admin ? 'Sim' : 'Não'  %> </td>
+        </tr>
+    </tbody>
+</table>
